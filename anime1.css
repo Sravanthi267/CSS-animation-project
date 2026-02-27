@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width:80%;
+    height:150px;
+    border:2px solid black;
+    margin:20px auto;
+    border-radius: 5px;
+    padding: 0 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .box1{
+    width:90px;
+    height:90px;
+    background: blue;
+    border-radius: 10px;
+    animation:anim1 infinite 1.5s;
+}
+.container .box2{
+    width:90px;
+    height:90px;
+    background: orange;
+    border-radius: 10px;
+    animation:anim2 infinite 1.5s;
+}
+@keyframes anim1{
+    0%,100%{
+        transform: translateX(0px) ;
+    }
+    50%{
+        transform: translateX(400px) rotate(360deg);
+        background: orange;
+    }
+}
+@keyframes  anim2{
+    0%,100%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-400px) rotate(-360deg);
+        background: blue;
+    }
+}
